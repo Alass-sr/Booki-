@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,400;0,500;1,300&display=swap');
+
+/********************************** GENERAL ***************************************/
+:root {
+    --color1: #0065FC;
+    --color2: #DEEBFF;
+    --color3: #F2F2F2;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", "sans-serif";
+}
+
+
+/**************************************** NAV et LOGO *****************************/
+
+#logoBooki {
+    margin-right: auto;
+    padding-left: 50px;
+    width: 170px;
+}
+
+.navbar {
+    display: flex;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+nav a {
+    padding: 2rem;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    border-top: 3px solid #0065fc;
+    color: #0065fc;
+}
+
+@media screen and (max-width: 768px) {
+    #logoBooki {
+        display: inline;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar {
+        flex-basis: 100%;
+    }
+    .navbar a {
+        flex-basis: 50%;
+        text-align: center;
+    }
+}
+
+
+
+/************************************** EN TETE ********************************/
+.wrapper {
+    padding: 0 50px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 35px;
+}
+
+/*************************************** BARRE DE RECHERCHE *******************/
+.search {
+    display: flex;
+    margin-bottom: 21px;
+}
+
+input {
+    padding-left: 10px;
+}
+
+.search i {
+    padding: 10px 12px;
+    background-color: var(--color3);
+    border-radius: 10px 0px 0 10px;
+}
+
+.search input {
+    padding-right: 60px;
+    border: 1px solid var(--color3);
+    overflow: hidden;
+}
+
+.search input::placeholder {
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    opacity: 1;
+}
+
+.search button {
+    background-color: var(--color1);
+    font-size: 1rem;
+    padding: 13px 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: transform 200ms;
+
+}
+
+.search button:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+.fa-solid.fa-magnifying-glass {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .search-select {
+        display: none;    
+    }
+    .fa-solid.fa-magnifying-glass {
+        display: inline;
+        background-color: inherit;              
+    }
+}
+
+/******************************* FILTRE ****************************/
+
+.filtre-groupe {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+}
+.filtre-groupe h1 {
+    font-size: 1.1rem;
+    display: inline;
+    margin-top: 16px;
+}
+
+.filtre {
+    border: 1px solid var(--color2);
+    border-radius: 20px;
+    margin-left: 23px;
+    transition: all 200ms;
+}
+
+.filtre:hover {
+    background-color:var(--color2);
+    transform: scale(1.1);
+}
+
+.filtre span {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.filtre .fas {
+    background-color: var(--color2);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--color1);
+    margin: -1px;
+    width: 36px;
+    height: 36px;
+}
+
+/************************************** INFO ***********************************/
+
+.information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px
+}
+
+.information .fas {
+    color: var(--color1);
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--color2);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/********************************** APPART ET POPULARITE ****************/
+
+.appartements-list {
+    display: flex;
+    gap: 20px;   
+}
+
+.appartements-list > div {
+    background-color: var(--color3);
+    padding: 10px;
+    border-radius: 10px;
+}
+.appartements-list .city {
+    flex-basis: 66%;
+}
+
+.appartements-list .popular {
+    flex-basis: 33%;
+}
+
+.appartements-list .city a {
+    font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+    .appartements-list {
+        flex-direction: column;
+    }
+    .popular {
+        order: -1;
+    }
+}
+
+/********************************* LISTE APPARTEMENT **********************/
+.city-appartements-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+.city-appartements-list div {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+
+/****************************************** POPULAIRE *****************************/
+.appartements-list .popular-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    flex-basis: 100%;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+    .appartements-list.popular-flex {
+        flex-direction: row;
+    }
+}
+
+/****************************************** APPARTEMENTS CARD **********************/
+.appartements-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 16px #0000002e;
+    flex-grow: 1;
+    transition: all 0.2s;
+    flex-basis: 25%;
+    min-width: 150px;
+}
+
+.appartements-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+
+/******************************************** APPARTEMENTS IMAGE ****/
+.appartements-card img {
+    border-radius: 10px 10px 0 0;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.appartements-card h3, 
+.appartements-card p,
+.popular-description p,
+.popular-description h3 {
+    margin: 2px;
+}
+.blue {
+   color: var(--color1); 
+}
+
+.grey {
+    color: var(--color2);
+}
+
+/**************************************** POPULAIRE ***********************/
+.popular {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-card.appartements-card img {
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    width: 40%;
+    margin-right: 10px;  
+}
+
+.popular-description {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+.popular-card {
+    display: flex;
+    min-width: 150px;
+}
+.popular-card .stars {
+    margin-top: auto;
+}
+.popular h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular h3,
+.city h3 {
+    margin-top: 5px;
+}
+
+
+/**************************************** ACTIVITE ****************************/
+    
+.activity-list {
+    height: 500px;
+}
+.activity-list-card {
+    display: flex;
+    height: 450px;
+    width: 100%;   
+}
+.activity-card {
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    margin:20px; 
+    transition: all 0.2s;
+}
+.activity-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+
+
+.activity-card.great-card {
+    
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0000002e;
+    flex-basis: 25%;
+}
+.vieux-port-card img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0 0;
+    flex-basis: 25%;
+    
+}
+
+.group-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    align-content: center;
+    flex-basis: 25%;
+    
+}
+
+
+.activity-card.top-card,
+.activity-card.bottom-card {
+    flex-basis:20%;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: inherit;
+    margin-bottom: 60px;
+    box-shadow: 0 0 20px #0000002e;
+    height: 165px;
+}
+.activity-card.top-card img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0 0;
+}
+.activity-card.bottom-card img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px; 
+    border-radius: 10px 10px 0 0; 
+}
+
+
+.vieux-port-card h3,
+.activity-card.top-card h3,
+.activity-card.bottom-card h3 {
+    font-size: 0.9rem;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+
+/***************************************** FOOTER *****************************************/
+
+.container-footer {
+        display: flex;
+        flex-direction: row;
+        margin: 50px 50px;
+        justify-content: space-between;
+        background-color: var(--color3);
+}
+.container-footer a{
+    margin: 5px;
+}
+.container-footer a:hover {
+    font-weight: bold;
+}
+
+.propos,
+.hebergement,
+.assistance {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+}
+.propos h3,
+.hebergement h3,
+.assistance h3 {
+    padding: 2px;
+}
