@@ -109,10 +109,10 @@ input {
 .search button {
     background-color: var(--color1);
     font-size: 1rem;
-    padding: 13px 5px;
+    padding: 13px 13px;
     color: white;
     font-weight: bold;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
     border: none;
     cursor: pointer;
     opacity: 0.9;
@@ -128,6 +128,7 @@ input {
     display: none;
 }
 
+
 @media screen and (max-width: 450px) {
     .search-select {
         display: none;    
@@ -135,6 +136,9 @@ input {
     .fa-solid.fa-magnifying-glass {
         display: inline;
         background-color: inherit;              
+    }
+    .filtre-groupe h2 {
+        width: 100%;
     }
 }
 
@@ -146,7 +150,7 @@ input {
     gap: 10px 20px;
     flex-wrap: wrap;
 }
-.filtre-groupe h1 {
+.filtre-groupe h2 {
     font-size: 1.1rem;
     display: inline;
     margin-top: 16px;
@@ -209,20 +213,24 @@ input {
 .appartements-list > div {
     background-color: var(--color3);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .appartements-list .city {
     flex-basis: 66%;
+    padding: 20px;
 }
 
 .appartements-list .popular {
     flex-basis: 33%;
+    
 }
 
 .appartements-list .city a {
     font-weight: bold;
+    width: 100%;
+    padding: 15px 10px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .appartements-list {
         flex-direction: column;
     }
@@ -236,8 +244,8 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 15px;
+    
 
 }
 .city-appartements-list div {
@@ -247,10 +255,14 @@ input {
 }
 
 
+
 /****************************************** POPULAIRE *****************************/
 .appartements-list .popular-flex {
     display: flex;
     flex-direction: column;
+    padding: 25px;
+    background-color: var(--color3);
+    border-radius: 20px;
     gap: 10px;
     /* flex-wrap: wrap; */
     flex-basis: 100%;
@@ -266,8 +278,9 @@ input {
 /****************************************** APPARTEMENTS CARD **********************/
 .appartements-card {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 5px;
+    margin: 10px 11px;
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
     transition: all 0.2s;
@@ -282,7 +295,7 @@ input {
 
 /******************************************** APPARTEMENTS IMAGE ****/
 .appartements-card img {
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     height: 150px;
     width: 100%;
     object-fit: cover;
@@ -293,7 +306,8 @@ input {
 .appartements-card p,
 .popular-description p,
 .popular-description h3 {
-    margin: 2px;
+    margin: 4px;
+    font-size: 0.9rem;
 }
 .blue {
    color: var(--color1); 
@@ -307,12 +321,13 @@ input {
 .popular {
     display: flex;
     flex-direction: column;
+
 }
 
 .popular-card.appartements-card img {
-    height: auto;
-    border-radius: 10px 0 0 10px;
-    width: 40%;
+    height: 150px;
+    border-radius: 20px 0 0 20px;
+    
     margin-right: 10px;  
 }
 
@@ -323,6 +338,7 @@ input {
 }
 .popular-card {
     display: flex;
+    padding: 4px;
     min-width: 150px;
 }
 .popular-card .stars {
@@ -331,30 +347,34 @@ input {
 .popular h3 {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .popular h3,
 .city h3 {
     margin-top: 5px;
+    width: 100%;
 }
 
 
 /**************************************** ACTIVITE ****************************/
-    
-.activity-list {
-    height: 500px;
+
+.activity {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-.activity-list-card {
+
+.activity-list {
     display: flex;
-    height: 450px;
-    width: 100%;   
+    width: 100%;
+    height: 500px;
+    gap: 20px;
+    justify-content: space-around;
 }
 .activity-card {
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    margin:20px; 
-    transition: all 0.2s;
+    width: 22%;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e; ;
 }
 .activity-card:hover {
     transform: scale(1.02);
@@ -362,80 +382,151 @@ input {
 }
 
 
-.activity-card.great-card {
-    
-    border-radius: 10px;
-    box-shadow: 0 0 20px #0000002e;
-    flex-basis: 25%;
+.reglage {
+    display: flex;
+    height: 60px;
+    font-size: 0.8rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    width: 95%;
 }
-.vieux-port-card img {
-    height: 350px;
+.activity-list img {
+    border-radius: 20px 20px 0 0;
+    height: 437px;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px 10px 0 0;
-    flex-basis: 25%;
-    
 }
+/************************************ GROUPE CARTE GAUCHE ***********************************/
 
-.group-card {
+.groupe-list {  
+    display: flex;
+    width: 22%;
+    height: 500px;   
+}
+.groupe-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px 10px 0 0;
-    align-content: center;
-    flex-basis: 25%;
-    
+    width: 100%;
+    border-radius: 20px 20px 0 0;     
 }
 
+.card-top-left {    
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+}
+.card-top-left:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+.card-bottom-left {
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e
+}
+.card-bottom-left:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}   
+.card-top-left img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card-bottom-left img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+} 
 
-.activity-card.top-card,
-.activity-card.bottom-card {
-    flex-basis:20%;
-    border-radius: 10px;
+/*************************************** GROUPE CARTE DROITE **************************/
+.activity-list2 {  
+    display: flex;
+    width: 22%;
+    box-shadow: 0 0 16px #0000002e;
+    border-radius: 20px;
+       
+}
+.activity-list2:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+
+.activity-card2 {
+    display: flex;
+    width: 22%;
+    flex-direction: column;
+    justify-content: space-between; 
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+
+}
+.activity-card2:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+.groupe-list2 {
+    display: flex;
+    width: 22%;
+}
+.groupe-card2 {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: inherit;
-    margin-bottom: 60px;
-    box-shadow: 0 0 20px #0000002e;
-    height: 165px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+         
 }
-.activity-card.top-card img {
-    height: 130px;
+
+.card-top-right {    
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+}
+.card-top-right:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+ 
+.card-bottom-right {
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e
+}
+.card-bottom-right:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}   
+
+.card-top-right img {
+    height: 150px;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px 10px 0 0;
 }
-.activity-card.bottom-card img {
-    height: 130px;
+ 
+.card-bottom-right img {
+    height: 150px;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px; 
-    border-radius: 10px 10px 0 0; 
-}
-
-
-.vieux-port-card h3,
-.activity-card.top-card h3,
-.activity-card.bottom-card h3 {
-    font-size: 0.9rem;
-    padding-left: 15px;
-    margin-bottom: 10px;
-}
-
-
+} 
+ 
 /***************************************** FOOTER *****************************************/
 
 .container-footer {
         display: flex;
         flex-direction: row;
-        margin: 50px 50px;
         justify-content: space-between;
+        padding-left: 50px;
         background-color: var(--color3);
+        
 }
 .container-footer a{
     margin: 5px;
+    color: grey;
+    font-size: 0.9rem;
 }
 .container-footer a:hover {
     font-weight: bold;
@@ -447,10 +538,11 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 70%;
+   flex-basis: 30%;
 }
 .propos h3,
 .hebergement h3,
 .assistance h3 {
     padding: 2px;
+    font-size: 0.9rem;
 }
