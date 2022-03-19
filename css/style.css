@@ -512,6 +512,29 @@ input {
     object-fit: cover;
     object-position: center;
 } 
+
+@media screen and (max-width: 768px) {
+    .activity-list {
+        flex-direction: column;
+        height: auto;
+        
+    }
+    .activity-card,
+    .activity-card2,
+    .groupe-list,
+    .groupe-list2 {
+        width: 100%;
+        
+    }
+    .activity-card img,
+    .activity-card2 img,
+    .groupe-list img,
+    .groupe-list2 img  {
+        display: flex;
+        height: 150px;     
+    }
+    
+}
  
 /***************************************** FOOTER *****************************************/
 
@@ -545,4 +568,9 @@ input {
 .assistance h3 {
     padding: 2px;
     font-size: 0.9rem;
+}
+@media screen and (max-width: 768px) {
+.container-footer {
+    flex-direction: column;
+}
 }
