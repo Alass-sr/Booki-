@@ -17,7 +17,6 @@
 
 #logoBooki {
     margin-right: auto;
-    padding-left: 50px;
     width: 170px;
 }
 
@@ -68,8 +67,9 @@ nav a:hover {
 
 
 /************************************** EN TETE ********************************/
-.wrapper {
-    padding: 0 50px;
+header, main  {
+    width: 90%;
+    margin: auto;
 }
 
 h1 {
@@ -81,27 +81,35 @@ h1 {
 .search {
     display: flex;
     margin-bottom: 21px;
+    align-items: center;
+    height: 45px;
+}
+
+.search * {
+    height: 45px;
 }
 
 input {
     padding-left: 10px;
+    
 }
 
 .search i {
     padding: 10px 12px;
     background-color: var(--color3);
     border-radius: 10px 0px 0 10px;
+    
 }
 
 .search input {
     padding-right: 60px;
     border: 1px solid var(--color3);
     overflow: hidden;
+    
 }
 
 .search input::placeholder {
     font-weight: bold;
-    font-size: 1rem;
     color: black;
     opacity: 1;
 }
@@ -137,10 +145,22 @@ input {
         display: inline;
         background-color: inherit;              
     }
+    .search button {
+        border-radius: 15px 15px 15px 15px;
+        padding: 13px 5px;
+    }
     .filtre-groupe h2 {
         width: 100%;
+        margin-right: 23px;
+
     }
+    
+      
 }
+
+        
+    
+
 
 /******************************* FILTRE ****************************/
 
@@ -236,6 +256,7 @@ input {
     }
     .popular {
         order: -1;
+        min-width: 150px;
     }
 }
 
@@ -273,6 +294,9 @@ input {
     .appartements-list.popular-flex {
         flex-direction: row;
     }
+    .appartements-list > div {
+        background-color: white;
+    }
 }
 
 /****************************************** APPARTEMENTS CARD **********************/
@@ -280,7 +304,7 @@ input {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    margin: 10px 11px;
+    /* margin: 10px 11px; */
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
     transition: all 0.2s;
@@ -300,13 +324,17 @@ input {
     width: 100%;
     object-fit: cover;
     object-position: center;
+
 }
 
 .appartements-card h3, 
-.appartements-card p,
+.appartements-card p {
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
 .popular-description p,
 .popular-description h3 {
-    margin: 4px;
+    
     font-size: 0.9rem;
 }
 .blue {
@@ -321,20 +349,22 @@ input {
 .popular {
     display: flex;
     flex-direction: column;
+    
 
 }
 
-.popular-card.appartements-card img {
-    height: 150px;
+.popular-card img {
+    height: 180px;
     border-radius: 20px 0 0 20px;
-    
+    width: 50%;
     margin-right: 10px;  
 }
 
 .popular-description {
     display: flex;
-    flex-basis: 100%;
+    flex-basis: 80%;
     flex-direction: column;
+    padding: 5px;
 }
 .popular-card {
     display: flex;
@@ -403,7 +433,7 @@ input {
 .groupe-list {  
     display: flex;
     width: 22%;
-    height: 500px;   
+    
 }
 .groupe-card {
     display: flex;
@@ -542,7 +572,7 @@ input {
         justify-content: space-between;
         padding-left: 50px;
         background-color: var(--color3);
-        
+        padding-bottom: 30px;
 }
 .container-footer a{
     margin: 5px;
