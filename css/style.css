@@ -151,11 +151,12 @@ input {
     }
     .filtre-groupe h2 {
         width: 100%;
-        margin-right: 23px;
-
+        /* margin-right: 23px; */
+    }
+    .filtre {
+        margin: 1px;
     }
     
-      
 }
 
         
@@ -177,9 +178,9 @@ input {
 }
 
 .filtre {
-    border: 1px solid var(--color2);
+    border: 2px solid var(--color2);
     border-radius: 20px;
-    margin-left: 23px;
+    /* margin-left: 23px; */
     transition: all 200ms;
 }
 
