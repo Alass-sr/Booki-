@@ -271,7 +271,8 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
+    padding: 20px;
     
 
 }
@@ -315,6 +316,7 @@ input {
     transition: all 0.2s;
     flex-basis: 25%;
     min-width: 150px;
+    height: 210px
     
 }
 
@@ -326,8 +328,9 @@ input {
 /******************************************** APPARTEMENTS IMAGE ****/
 .appartements-card img {
     border-radius: 20px 20px 0 0;
-    height: 150px;
+    height: 110px;
     width: 100%;
+    margin-bottom: -4px;
     object-fit: cover;
     object-position: center;
 
@@ -374,6 +377,7 @@ input {
     flex-basis: 100%;
     margin-right: 10px;
     flex-direction: column;
+
 }
 .popular-card {
     display: flex;
@@ -391,9 +395,8 @@ input {
     width: 100%;
 }
 
-.popular h3,
 .city h3 {
-    margin-top: 5px;
+    margin-bottom: -6px;
     width: 100%;
 }
 
