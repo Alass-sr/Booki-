@@ -243,19 +243,21 @@ input {
 }
 .appartements-list .city {
     flex-basis: 66%;
+    height: 641px
     
 }
 
 .appartements-list .popular {
     flex-basis: 33%;
-    
+    height: 641px
 }
 
 .appartements-list .city a {
     font-weight: bold;
     width: 100%;
-    padding: 15px 10px;
+    padding: 0 10px;
 }
+
 @media screen and (max-width: 992px) {
     .appartements-list {
         flex-direction: column;
@@ -316,7 +318,7 @@ input {
     transition: all 0.2s;
     flex-basis: 25%;
     min-width: 150px;
-    height: 210px
+    height: 205px;
     
 }
 
@@ -336,13 +338,13 @@ input {
 
 }
 
-.appartements-card h3, 
+.appartements-card h4, 
 .appartements-card p {
-    margin-left: 10px;
+    margin: 10px;
     font-size: 0.9rem;
 }
 .popular-description p,
-.popular-description h3 {
+.popular-description h4 {
     
     font-size: 0.9rem;
 }
@@ -355,20 +357,41 @@ input {
 }
 
 
-
 /**************************************** POPULAIRE ***********************/
 .popular {
     display: flex;
     flex-direction: column;
 }
 
-.popular-card img {
-    height: 150px;
-    border-radius: 20px 0 0 20px;
+.popular-flex h3 {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    margin-bottom: -6px;
+    margin-left: 10px;
+}
+.fas.fa-chart-line {
+    margin-right: 17px;
+}
+
+.popular-card {
+    display: flex;
+    /* min-width: 180px; */
+    padding: 3px;
+    box-shadow: 0 0 16px #0000002e;
+    flex-grow: 1;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+
+.popular-card img {
+    height: 140px;
+    border-radius: 20px 0 0 20px;
+    width: 70%;
+    padding: 3px; 
     object-fit: cover;
     object-position: center;
-    padding: 3px; 
      
 }
 
@@ -379,25 +402,28 @@ input {
     flex-direction: column;
 
 }
-.popular-card {
-    display: flex;
-    padding: 5px;
-    min-width: 180px;
-     
-    
-}
+
 .popular-card .stars {
     margin-top: auto;
 }
-.popular h3 {
+.popular h4 {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
+    margin-bottom: -6px;
+    margin-left: 10px;
+}
+.popular p {
+    margin-left: 10px;
 }
 
 .city h3 {
-    margin-bottom: -6px;
+    margin: 16px 25px;
     width: 100%;
+}
+.popular-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
 }
 
 
