@@ -74,8 +74,18 @@ header, main  {
     margin: auto;
 }
 
-h1 {
+#filtre-container h1 {
     font-size: 20px;
+}
+
+@media screen and (max-width: 450px) {
+    .navBar a {
+        margin-bottom: 20px;
+    }
+    #filtre-container h1 {
+        margin: 0;
+    }
+
 }
 
 /*************************************** BARRE DE RECHERCHE *******************/
@@ -137,6 +147,10 @@ input {
 
 
 @media screen and (max-width: 450px) {
+    header,
+    main {
+        width: 100%;
+    }
     .search-select {
         display: none;    
     }
@@ -147,12 +161,7 @@ input {
     .search button {
         border-radius: 15px 15px 15px 15px;
         padding: 13px 5px;
-    }
-    .filtre-groupe h2 {
-        width: 100%;
-        /* margin-right: 23px; */
-    }
-      
+    } 
 }
 
         
@@ -207,6 +216,22 @@ input {
     height: 40px;
 }
 
+@media screen and (max-width: 450px) {
+    .filtre-groupe h2 {
+        width: 100%;
+        /* margin-right: 23px; */
+    }
+    
+    #filtre-container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+}
+
+
 /************************************** INFO ***********************************/
 
 .information {
@@ -242,14 +267,11 @@ input {
     border-radius: 20px;
 }
 .appartements-list .city {
-    flex-basis: 66%;
-    height: 641px
-    
+    flex-basis: 66%;  
 }
 
 .appartements-list .popular {
-    flex-basis: 33%;
-    height: 641px
+    flex-basis: 33%;   
 }
 
 .appartements-list .city a {
@@ -262,11 +284,17 @@ input {
     .appartements-list {
         flex-direction: column;
     }
-    .popular {
+    .appartements-list .popular {
         order: -1;
-        min-width: 150px;
+        max-width: 900px;
+        /* width: 100%; */
     }
+    .popular-description {
+        text-align: center;
+    }
+
 }
+
 
 /********************************* LISTE APPARTEMENT **********************/
 .city-appartements-list {
@@ -275,9 +303,8 @@ input {
     justify-content: center;
     gap: 30px;
     padding: 20px;
-    
-
 }
+
 .city-appartements-list div {
     flex-wrap: wrap;
     gap: 1rem;
@@ -317,15 +344,15 @@ input {
     flex-grow: 1;
     transition: all 0.2s;
     flex-basis: 25%;
-    min-width: 150px;
-    height: 205px;
-    
+    min-width: 150px;    
 }
 
 .appartements-card:hover {
     transform: scale(1.02);
     box-shadow: 3px 5px 11px -5px #000000;
 }
+
+
 
 /******************************************** APPARTEMENTS IMAGE ****/
 .appartements-card img {
@@ -382,7 +409,7 @@ input {
     flex-grow: 1;
     border-radius: 20px;
     background-color: white;
-    
+    min-width: 150px;
 }
 
 .popular-card img {
@@ -406,9 +433,7 @@ input {
 .popular-card .stars {
     margin-top: auto;
 }
-.popular h4 {
-    display: flex;
-    /* justify-content: space-between; */
+.popular h4 {    
     width: 100%;
     margin-bottom: -6px;
     margin-left: 10px;
@@ -512,6 +537,7 @@ input {
     object-position: center;
 } 
 
+
 /*************************************** GROUPE CARTE DROITE **************************/
 .activity-list2 {  
     display: flex;
@@ -604,7 +630,28 @@ input {
     .groupe-list2 img {
         height: 160px;     
     }
+    .groupe-card .card-top-left,
+    .groupe-card2 .card-top-right {
+        margin-bottom: 18px;
+    }
+@media screen and (max-width: 450px) {
+    .activity {
+        width: 90%;
+        margin: auto;
+    }
+    .activity h3 {
+        font-size: 25px;
+    }
+    .activity h4 {
+        font-size: 15px;
+    }
+    .groupe-card2 {
+        margin-bottom: 40px;
+    }
 }
+
+
+
  
 /***************************************** FOOTER *****************************************/
 
@@ -637,7 +684,7 @@ input {
 .hebergement h3,
 .assistance h3 {
     padding: 2px;
-    font-size: 0.9rem;
+    font-size: 17px;
 }
 @media screen and (max-width: 768px) {
 .container-footer {
