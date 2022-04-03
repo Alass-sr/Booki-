@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 /********************************** GENERAL ***************************************/
 :root {
@@ -69,10 +69,12 @@ nav a:hover {
 
 
 /************************************** EN TETE ********************************/
-header, main  {
+header, 
+main  {
     width: 90%;
     margin: auto;
 }
+
 
 #filtre-container h1 {
     font-size: 20px;
@@ -104,6 +106,8 @@ input {
 }
 
 .search i {
+    display: flex;
+    align-items: center;
     padding: 10px 18px;
     background-color: var(--color3);
     border-radius: 10px 0px 0 10px;
@@ -151,6 +155,9 @@ input {
     main {
         width: 100%;
     }
+    .search {
+        margin-bottom: 20px;
+    }
     .search-select {
         display: none;    
     }
@@ -172,7 +179,7 @@ input {
 
 .filtre-groupe {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     margin-bottom: 15px;
     flex-wrap: wrap;
 }
@@ -217,9 +224,11 @@ input {
 }
 
 @media screen and (max-width: 450px) {
+    .filtre-groupe {
+        gap: 20px;
+    }
     .filtre-groupe h2 {
         width: 100%;
-        /* margin-right: 23px; */
     }
     
     #filtre-container {
@@ -229,6 +238,7 @@ input {
         margin: auto;
         height: auto;
     }
+    
 }
 
 
@@ -286,13 +296,11 @@ input {
     }
     .appartements-list .popular {
         order: -1;
-        max-width: 900px;
-        /* width: 100%; */
+        width: 100%;
     }
     .popular-description {
         text-align: center;
     }
-
 }
 
 
@@ -307,7 +315,7 @@ input {
 
 .city-appartements-list div {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 10px;
     justify-content: space-around;
 }
 
@@ -368,12 +376,12 @@ input {
 .appartements-card h4, 
 .appartements-card p {
     margin: 10px;
-    font-size: 0.9rem;
+    font-size: 15px;
 }
 .popular-description p,
 .popular-description h4 {
     
-    font-size: 0.9rem;
+    font-size: 15px;
 }
 .blue {
    color: var(--color1); 
@@ -388,6 +396,7 @@ input {
 .popular {
     display: flex;
     flex-direction: column;
+
 }
 
 .popular-flex h3 {
@@ -451,6 +460,12 @@ input {
     box-shadow: 3px 5px 11px -5px #000000;
 }
 
+@media screen and (max-width: 450px) {
+    .popular-flex {
+        border-radius: 0;
+    }
+}
+
 
 /**************************************** ACTIVITE ****************************/
 
@@ -458,11 +473,13 @@ input {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.activity h3 {
+    margin-left: 10px;
+}
 
 .activity-list {
     display: flex;
     width: 100%;
-    height: 500px;
     gap: 20px;
     justify-content: space-around;
 }
@@ -480,12 +497,13 @@ input {
 .reglage {
     display: flex;
     height: 60px;
-    font-size: 0.7rem;
+    font-size: 15px;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5%;
     width: 95%;
 }
+
 .activity-list img {
     border-radius: 20px 20px 0 0;
     height: 437px;
@@ -500,6 +518,7 @@ input {
     width: 22%;
     
 }
+
 .groupe-card {
     display: flex;
     flex-direction: column;
@@ -512,24 +531,28 @@ input {
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
 }
+
 .card-top-left:hover {
     transform: scale(1.02);
     box-shadow: 3px 5px 11px -5px #000000;
 }
 .card-bottom-left {
     border-radius: 20px;
-    box-shadow: 0 0 16px #0000002e
+    box-shadow: 0 0 16px #0000002e;
 }
+
 .card-bottom-left:hover {
     transform: scale(1.02);
     box-shadow: 3px 5px 11px -5px #000000;
 }   
+
 .card-top-left img {
     height: 200px;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
+
 .card-bottom-left img {
     height: 100px;
     width: 100%;
@@ -543,9 +566,9 @@ input {
     display: flex;
     width: 22%;
     box-shadow: 0 0 16px #0000002e;
-    border-radius: 20px;
-       
+    border-radius: 20px;       
 }
+
 .activity-list2:hover {
     transform: scale(1.02);
     box-shadow: 3px 5px 11px -5px #000000;
@@ -588,7 +611,7 @@ input {
  
 .card-bottom-right {
     border-radius: 20px;
-    box-shadow: 0 0 16px #0000002e
+    box-shadow: 0 0 16px #0000002e;
 }
 .card-bottom-right:hover {
     transform: scale(1.02);
@@ -613,15 +636,14 @@ input {
     
     .activity-list {
         flex-direction: column;
-        height: auto;
-        
+        height: auto;   
     }
+
     .great-card,
     .great-card2,
     .groupe-list,
     .groupe-list2 {
-        width: 100%;
-       
+        width: 100%;   
     }
 
     .great-card img,
@@ -630,10 +652,13 @@ input {
     .groupe-list2 img {
         height: 160px;     
     }
+
     .groupe-card .card-top-left,
     .groupe-card2 .card-top-right {
         margin-bottom: 18px;
     }
+}
+
 @media screen and (max-width: 450px) {
     .activity {
         width: 90%;
@@ -650,24 +675,24 @@ input {
     }
 }
 
-
-
  
 /***************************************** FOOTER *****************************************/
-
 .container-footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 50px;
-        background-color: var(--color3);
-        padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    background-color: var(--color3);
+    padding-bottom: 30px;  
+           
 }
-.container-footer a{
+
+.container-footer a {
     margin: 5px;
     color: grey;
-    font-size: 0.9rem;
+    font-size: 15px;
 }
+
 .container-footer a:hover {
     font-weight: bold;
 }
@@ -686,14 +711,24 @@ input {
     padding: 2px;
     font-size: 17px;
 }
+
 @media screen and (max-width: 768px) {
-.container-footer {
-    flex-direction: column;
+    .container-footer {
+        flex-direction: column;
+    }
+
+    .propos,
+    .hebergement,
+    .assistance {
+        padding-bottom: 5px;
+        padding-top: 20px;
+      }
+}  
+@media screen and (max-width: 450px) {
+    .propos,
+    .hebergement,
+    .assistance {
+        margin-left: -25px;
+      }
 }
-.propos,
-.hebergement,
-.assistance {
-    padding-bottom: 5px;
-    padding-top: 20px;
-  }
-}
+
