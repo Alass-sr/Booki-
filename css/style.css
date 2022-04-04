@@ -298,9 +298,7 @@ input {
         order: -1;
         width: 100%;
     }
-    .popular-description {
-        text-align: center;
-    }
+    
 }
 
 
@@ -374,10 +372,12 @@ input {
 }
 
 .appartements-card h4, 
-.appartements-card p {
+.appartements-card p,
+.appartements-card .stars-appart {
     margin: 10px;
-    font-size: 15px;
+    font-size: 14px;
 }
+
 .popular-description p,
 .popular-description h4 {
     
@@ -412,7 +412,6 @@ input {
 
 .popular-card {
     display: flex;
-    /* min-width: 180px; */
     padding: 3px;
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
@@ -424,7 +423,7 @@ input {
 .popular-card img {
     height: 140px;
     border-radius: 20px 0 0 20px;
-    width: 70%;
+    width: 60%;
     padding: 3px; 
     object-fit: cover;
     object-position: center;
@@ -433,23 +432,24 @@ input {
 
 .popular-description {
     display: flex;
-    flex-basis: 100%;
-    margin-right: 10px;
     flex-direction: column;
-
+    flex-basis: 100%;
+   
 }
 
-.popular-card .stars {
-    margin-top: auto;
-}
 .popular h4 {    
     width: 100%;
     margin-bottom: -6px;
-    margin-left: 10px;
+    margin-left: 25px;
 }
 .popular p {
-    margin-left: 10px;
+    margin-left: 25px;
 }
+.popular .stars-popular {
+    margin: 13px 25px;
+}
+ 
+
 
 .city h3 {
     margin: 16px 25px;
