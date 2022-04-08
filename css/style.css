@@ -27,6 +27,10 @@ header {
     padding: 25px 10px;
 }
 
+#logoBooki img {
+    width: 100px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -266,9 +270,7 @@ input {
 
 .appartements-list {
     display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;  
+    justify-content: space-between;  
 }
 
 .appartements-list > div {
@@ -297,6 +299,7 @@ input {
     .appartements-list .popular {
         order: -1;
         width: 100%;
+        margin-bottom: 5px;
     }
     
 }
@@ -308,7 +311,6 @@ input {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 20px;
 }
 
 .city-appartements-list div {
@@ -328,8 +330,8 @@ input {
     border-radius: 20px;
     gap: 40px;
     /* flex-wrap: wrap; */
-    flex-basis: 100%;
-    justify-content: space-evenly;
+    /* flex-basis: 100%;
+    justify-content: space-evenly; */
 }
 
 @media screen and (max-width: 768px) {
@@ -358,6 +360,15 @@ input {
     box-shadow: 3px 5px 11px -5px #000000;
 }
 
+@media screen and (max-width: 450px) {
+    .city-appartements-list {
+        margin: 0;
+    }
+    .appartements-card {
+        flex-basis: 100%;
+        
+    }
+}
 
 
 /******************************************** APPARTEMENTS IMAGE ****/
@@ -372,17 +383,15 @@ input {
 }
 
 .appartements-card h4, 
-.appartements-card p,
+.appartements-card span,
 .appartements-card .stars-appart {
     margin: 10px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
-.popular-description p,
-.popular-description h4 {
-    
-    font-size: 15px;
-}
+
+/*************************************** STARS **********************************/
+
 .blue {
    color: var(--color1); 
 }
@@ -390,6 +399,7 @@ input {
 .grey {
     color: var(--color2);
 }
+
 
 
 /**************************************** POPULAIRE ***********************/
@@ -403,7 +413,7 @@ input {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: -6px;
+    margin-bottom: -20px;
     margin-left: 10px;
 }
 .fas.fa-chart-line {
@@ -414,17 +424,17 @@ input {
     display: flex;
     padding: 3px;
     box-shadow: 0 0 16px #0000002e;
-    flex-grow: 1;
     border-radius: 20px;
     background-color: white;
     min-width: 150px;
+    
 }
 
 .popular-card img {
     height: 140px;
+    max-width: 135px;
     border-radius: 20px 0 0 20px;
-    width: 60%;
-    padding: 3px; 
+    width: 60%; 
     object-fit: cover;
     object-position: center;
      
@@ -434,25 +444,26 @@ input {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
+    justify-content: space-between;
+    padding: 0px 15px 4px 15px;
    
+}
+.popular-description span,
+.popular-description h4 {
+    
+    font-size: 13px;
 }
 
 .popular h4 {    
     width: 100%;
-    margin-bottom: -6px;
-    margin-left: 25px;
+   
 }
-.popular p {
-    margin-left: 25px;
-}
+
 .popular .stars-popular {
-    margin: 13px 25px;
+    font-size: 13px;
 }
  
-
-
 .city h3 {
-    margin: 16px 25px;
     width: 100%;
 }
 .popular-card:hover {
@@ -664,11 +675,13 @@ input {
         width: 90%;
         margin: auto;
     }
+
+    .city h3,
     .activity h3 {
-        font-size: 25px;
+        font-size: 23px;
     }
     .activity h4 {
-        font-size: 15px;
+        font-size: 14px;
     }
     .groupe-card2 {
         margin-bottom: 40px;
