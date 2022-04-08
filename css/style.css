@@ -242,9 +242,11 @@ input {
         margin: auto;
         height: auto;
     }
+    #filtre-container h1 {
+        font-size: 24px;
     
 }
-
+}
 
 /************************************** INFO ***********************************/
 
@@ -445,11 +447,17 @@ input {
     flex-direction: column;
     flex-basis: 100%;
     justify-content: space-between;
-    padding: 0px 15px 4px 15px;
+    padding: 0px 16px 6px 20px;
    
 }
-.popular-description span,
+
 .popular-description h4 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+.popular-description h4,
+.popular-description span {
     
     font-size: 13px;
 }
@@ -458,7 +466,6 @@ input {
     width: 100%;
    
 }
-
 .popular .stars-popular {
     font-size: 13px;
 }
@@ -475,7 +482,13 @@ input {
     .popular-flex {
         border-radius: 0;
     }
-}
+    .popular-description h4,
+    .popular-description span,
+    .appartements-card h4, 
+    .appartements-card span {
+        font-size: 18px;
+    } 
+}  
 
 
 /**************************************** ACTIVITE ****************************/
@@ -675,13 +688,13 @@ input {
         width: 90%;
         margin: auto;
     }
-
+    .popular-flex h3,
     .city h3,
     .activity h3 {
         font-size: 23px;
     }
     .activity h4 {
-        font-size: 14px;
+        font-size: 17px;
     }
     .groupe-card2 {
         margin-bottom: 40px;
